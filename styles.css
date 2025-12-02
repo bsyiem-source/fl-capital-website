@@ -1,0 +1,117 @@
+/* FL Capital — Patronus-style premium theme
+   Save as styles.css and place logo.png beside index.html */
+
+:root{
+  --bg-dark:#07101a;
+  --navy:#0a1a2d;
+  --gold:#c9a86c;
+  --muted:#9aa3ad;
+  --card:#0f1720;
+  --light:#f5f6f7;
+  --max:1200px;
+  --radius:12px;
+  font-family: 'Playfair Display', Georgia, serif; /* headings serif */
+  --sans: Inter, system-ui, -apple-system, 'Segoe UI', Roboto, Arial, sans-serif;
+}
+
+/* reset + base */
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg-dark);color:var(--light);font-family:var(--sans);line-height:1.6;-webkit-font-smoothing:antialiased}
+.wrap{max-width:var(--max);margin:0 auto;padding:28px}
+
+/* header */
+.site-header{position:sticky;top:0;background:transparent;z-index:80}
+.header-row{display:flex;align-items:center;justify-content:space-between}
+.brand{display:flex;gap:14px;align-items:center;text-decoration:none}
+.logo{height:52px}
+.brand-name{font-weight:700;color:var(--light);font-size:18px}
+.brand-tag{font-size:12px;color:var(--muted)}
+.nav ul{display:flex;gap:18px;list-style:none;align-items:center}
+.nav a{color:var(--light);text-decoration:none;font-weight:600;font-size:14px;opacity:0.95}
+.mobile-toggle{display:none;background:none;border:0;color:var(--light);font-size:18px}
+
+/* buttons */
+.btn-primary{background:linear-gradient(90deg,var(--gold),#e2c892);color:#08111a;padding:10px 16px;border-radius:8px;text-decoration:none;font-weight:700}
+.btn-outline{border:1px solid rgba(255,255,255,0.08);padding:8px 12px;border-radius:8px;color:var(--light);text-decoration:none}
+.btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:8px 12px;border-radius:8px;color:var(--light)}
+
+/* hero */
+.hero{padding:64px 0 48px;background:linear-gradient(180deg, rgba(4,9,13,0.6), rgba(7,16,26,0.8));border-bottom:1px solid rgba(255,255,255,0.03)}
+.hero-inner{display:grid;grid-template-columns:1fr;gap:24px;align-items:center}
+@media(min-width:980px){.hero-inner{grid-template-columns:1fr 420px}}
+.hero-content h1{font-family:'Playfair Display', Georgia, serif;font-size:36px;color:var(--light);margin-bottom:12px;line-height:1.05}
+.lead{color:var(--muted);max-width:640px;margin-bottom:18px;font-size:16px}
+.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:18px}
+.hero-features{list-style:none;padding-left:0;color:var(--muted);font-size:14px}
+.hero-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:12px;border:1px solid rgba(255,255,255,0.04)}
+.hero-card h3{margin:0 0 8px 0;color:var(--light)}
+
+/* stats */
+.stats{display:flex;gap:12px;list-style:none;padding:0;margin-top:12px}
+.stats li{flex:1;text-align:center;border-left:1px solid rgba(255,255,255,0.03);padding-left:10px}
+.stats li:first-child{border-left:0;padding-left:0}
+.stats strong{display:block;color:var(--gold);font-size:18px}
+
+/* sections */
+.section{padding:56px 0}
+.section-light{background:#fff;border-top:1px solid rgba(0,0,0,0.04);color:#07101a}
+.section-light .wrap{padding-top:18px;padding-bottom:18px}
+.narrow{max-width:980px;margin:0 auto}
+
+/* section titles */
+.section-title{font-family:'Playfair Display', Georgia, serif;font-size:24px;color:var(--gold);margin-bottom:6px}
+.section-sub{color:var(--muted);margin-bottom:18px}
+
+/* services grid */
+.services-grid{display:grid;grid-template-columns:1fr;gap:16px}
+@media(min-width:760px){.services-grid{grid-template-columns:repeat(2,1fr)}}
+@media(min-width:1100px){.services-grid{grid-template-columns:repeat(4,1fr)}}
+.service{background:transparent;padding:20px;border-radius:10px}
+.section-light .service{background:#fff;border-radius:10px;border:1px solid rgba(10,26,45,0.04)}
+.service h4{font-family:'Playfair Display', Georgia, serif;color:#0a1a2d;margin-bottom:8px}
+
+/* why dark */
+.why-dark{background:transparent;border-top:1px solid rgba(255,255,255,0.02);border-bottom:1px solid rgba(255,255,255,0.02)}
+.two-col{display:grid;grid-template-columns:1fr;gap:22px}
+@media(min-width:900px){.two-col{grid-template-columns:1fr 420px}}
+.why-list{list-style:none;color:var(--muted);padding-left:0}
+.why-list li{margin-bottom:12px}
+
+/* quote card */
+.quote-card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.quote-card blockquote{font-style:italic;color:var(--light);margin:0 0 8px 0}
+.quote-card cite{display:block;color:var(--muted);font-size:13px}
+
+/* insights */
+.insights-grid{display:grid;grid-template-columns:1fr;gap:14px}
+@media(min-width:900px){.insights-grid{grid-template-columns:repeat(3,1fr)}}
+.insight{background:#fff;padding:16px;border-radius:10px;color:#07101a;border:1px solid rgba(10,26,45,0.04)}
+
+/* contact */
+.contact-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:1000px){.contact-grid{grid-template-columns:1fr 360px}}
+.card{background:var(--card);padding:18px;border-radius:10px;border:1px solid rgba(255,255,255,0.03)}
+.card-dark{background:transparent;border:1px solid rgba(255,255,255,0.03)}
+.contact-form input,.contact-form select,.contact-form textarea{width:100%;padding:10px;border-radius:8px;border:1px solid rgba(255,255,255,0.06);background:transparent;color:var(--light);margin-bottom:10px}
+.contact-form textarea{resize:vertical}
+
+/* footer */
+.site-footer{background:#041018;padding:36px 0;border-top:1px solid rgba(255,255,255,0.02)}
+.footer-grid{display:grid;grid-template-columns:1fr;gap:18px}
+@media(min-width:900px){.footer-grid{grid-template-columns:repeat(3,1fr)}}
+.logo-small{height:40px}
+.footer-links a{color:var(--muted);text-decoration:none}
+
+/* small helpers */
+.muted{color:var(--muted)}
+.link-more{color:var(--gold);text-decoration:none}
+
+/* responsive */
+@media(max-width:900px){
+  .nav ul{display:none;position:fixed;top:70px;right:18px;background:#07101a;padding:16px;border-radius:10px;box-shadow:0 10px 30px rgba(0,0,0,0.6)}
+  .nav ul.open{display:flex;flex-direction:column;gap:12px}
+  .mobile-toggle{display:inline-block}
+  .wrap{padding:20px}
+  .hero-content h1{font-size:26px}
+  .brand-name{font-size:16px}
+}
